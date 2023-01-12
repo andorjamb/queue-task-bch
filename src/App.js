@@ -21,10 +21,8 @@ function App() {
 
   const enQueue = (e) => {
     let node = new Node(e.target.id);
-    console.log(e.target.id);
-    console.log(node);
     setActiveButton(true);
- 
+
 
     let pokemonsList = pokemons;
     let i = pokemonsList.findIndex((pokemon) => pokemon.id == e.target.id);
@@ -59,13 +57,15 @@ function App() {
       return null;
     }
     if (queue.size === 0) {
+      console.log('queue size is zero');
       setActiveButton(false);
       return null;
     }
-    let first = queue.first;
-    if (first === queue.last) {
-      setQueue({ ...queue, first: null, last: null, size: 0 });
-      setQueueDisplay({});
+    let first = queue.first;/**current first */
+
+    if (first === queue.last) {/** ie, one node only in queue */
+      setQueue({ first: null, last: null, size: 0 });
+      setQueueDisplay([]);
       return;
     }
     else {

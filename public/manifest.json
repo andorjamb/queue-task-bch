@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Queue Task App",
+  "name": "Datastructures Queue Task React App",
   "icons": [
     {
       "src": "favicon.ico",
